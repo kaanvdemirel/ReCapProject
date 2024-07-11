@@ -3,13 +3,15 @@ using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DataAccess.Concrete
 {
-    public class InMemoryProductDal:IProductDal
+    public class InMemoryProductDal:ICarDal
     {
+        List<Brand> _brands;
         List<Car> _cars;
 
         public InMemoryProductDal()
@@ -53,9 +55,24 @@ namespace DataAccess.Concrete
 
         }
 
-        public List<Car> GetAllByBrandId(int BrandId)
+        public List<Car> GetAll(Expression<Func<Car, bool>> filter = null)
         {
-            return _cars.Where(c => c.BrandId == BrandId).ToList();
+            throw new NotImplementedException();
+        }
+
+        public Car GetByBrandId(Expression<Func<Car, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Car GetByColorId(Expression<Func<Car, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Car> GetById(Expression<Func<Car, bool>> filter)
+        {
+            throw new NotImplementedException();
         }
 
         public void Update(Car car)
@@ -78,6 +95,11 @@ namespace DataAccess.Concrete
 
 
 
+        }
+
+        Car IEntityRepository<Car>.GetByBrandId(Expression<Func<Car, bool>> filter)
+        {
+            throw new NotImplementedException();
         }
     }
 }
