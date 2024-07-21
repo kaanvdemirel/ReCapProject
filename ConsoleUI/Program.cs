@@ -1,4 +1,5 @@
 ﻿using Business.Concrete;
+using Business.Constants;
 using DataAccess.Concrete;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
@@ -10,13 +11,3 @@ ColorManager colorManager = new ColorManager(new EfColorDal());
 CarManager carManager = new CarManager(new EfCarDal());
 
 
-
-
-foreach (var car in carManager.AddCar())
-{
-
-
-    
-
-
-}
