@@ -1,4 +1,5 @@
-﻿using Entities.Concrete;
+﻿using Core.Utilities.Results;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace Business.Abstract
 {
     public interface ICustomerService
     {
-        void Add(Customer customer);
+        IResult Add(Customer customer);
         void Update(Customer customer);
         void Delete(Customer customer);
         void GetAll(Customer customer);

@@ -24,6 +24,11 @@ namespace DataAccess.Concrete.EntityFramework
         public DbSet<Color> colors { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Customer> Customers { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Customer>()
+                .HasKey(c => c.UserId); // Burada 'Id' özelliğini birincil anahtar olarak belirliyoruz.
+        }
         public DbSet<Rental> Rentals { get; set;}
 
 

@@ -14,6 +14,7 @@ namespace Business.Constants
         public static string MaintenanceTime = "The system is under maintenance.";
         public static string CarsListed = "Cars Listed.";
         public static string RentalReturnError = "In order for the car to be rented, the car must be delivered.";
-        public static string CarRented = "Car Rented";
+        public static string CarRented = "Car Rented.";
+        public static string CustomerAdded = "Customer Added.";
     }
 }
