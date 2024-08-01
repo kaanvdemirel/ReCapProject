@@ -1,11 +1,13 @@
 ﻿using Business.Abstract;
 using Business.Constants;
+using Business.ValidationRules.FluentValidation;
 using Core.Entities;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
 using Entities.DTOs;
+using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -28,17 +30,15 @@ namespace Business.Concrete
         public IResult Add(Car car)
         {
            
+           
 
-            if (car.Name.Length<2)
-            {
-                return new ErrorResult(Messages.InvalidCarName);
-            }
-            else
-            {
+          
+        
+            
                 _carDal.Add(car);
                 return new SuccessResult(Messages.CarAdded);
 
-            }
+            
 
             
            
