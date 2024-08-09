@@ -30,6 +30,7 @@ namespace DataAccess.Concrete.EntityFramework
                 .HasKey(c => c.UserId); // Burada 'Id' özelliğini birincil anahtar olarak belirliyoruz.
         }
         public DbSet<Rental> Rentals { get; set;}
+        public DbSet<CarImage> CarImages { get; set; } 
 
 
     }

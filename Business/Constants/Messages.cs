@@ -16,5 +16,6 @@ namespace Business.Constants
         public static string RentalReturnError = "In order for the car to be rented, the car must be delivered.";
         public static string CarRented = "Car Rented.";
         public static string CustomerAdded = "Customer Added.";
+
     }
 }
